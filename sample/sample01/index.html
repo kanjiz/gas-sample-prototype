@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample01</title>
+    <base target="_top">
+</head>
+
+<body>
+    <p>ここにユーザー情報が表示されます。</p>
+    <p id="userName">
+        <?= userName ?>
+    </p>
+    <p id="userEmail">
+        <?= userEmail ?>
+    </p>
+    <p id="userId">
+        <?= userId ?>
+    </p>
+    <a href="?page=page1">Page1へ移動</a>
+    <a href="?page=page2">Page2へ移動</a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var userName = document.getElementById('userName').textContent;
+            var userEmail = document.getElementById('userEmail').textContent;
+            var userId = document.getElementById('userId').textContent;
+            console.log('User Name:', userName);
+            console.log('User Email:', userEmail);
+            console.log('User ID:', userId);
+            // ここにJavaScriptコードを記述
+        });
+    </script>
+</body>
+
+</html>
