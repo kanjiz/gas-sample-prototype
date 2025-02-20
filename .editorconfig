@@ -1,0 +1,22 @@
+root = true
+
+[*]
+# 文字コードをUTF-8に設定
+charset = utf-8
+# 改行コードをLFに設定
+end_of_line = lf
+# ファイルの最後に改行を追加
+insert_final_newline = true
+# インデントスタイルをスペースに設定
+indent_style = space
+# インデント幅を4スペースに設定
+indent_size = 4
+# 行末の空白を削除
+trim_trailing_whitespace = true
+
+# Markdownファイルの固有設定
+[*.md]
+# 行の最大長を無効化
+max_line_length = off
+# 行末の空白を削除しない
+trim_trailing_whitespace = false
