@@ -3,6 +3,7 @@ FROM node:22
 
 # 環境変数を設定
 ENV WORKDIR=/workspace
+ENV PATH="$WORKDIR/scripts:$PATH"
 
 # 作業ディレクトリを設定
 WORKDIR $WORKDIR
