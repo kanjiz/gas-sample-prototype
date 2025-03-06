@@ -10,7 +10,8 @@
     ],
     "postCreateCommand": "npm install",
     "remoteEnv": {
-        "WORKDIR": "/workspace"
+        "WORKDIR": "/workspace",
+        "PATH": "/workspace/scripts:${PATH}"
     },
     "customizations": {
         "vscode": {
