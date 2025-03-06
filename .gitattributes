@@ -1,0 +1,20 @@
+# すべてのテキストファイルに対して自動的に改行コードを変換
+* text=auto
+
+# JavaScriptファイルに対してLFを使用
+*.js text eol=lf
+
+# TypeScriptファイルに対してLFを使用
+*.ts text eol=lf
+
+# JSONファイルに対してLFを使用
+*.json text eol=lf
+
+# シェルスクリプトに対してLFを使用
+*.sh text eol=lf
+
+# Markdownファイルに対してLFを使用
+*.md text eol=lf
+
+# Windowsのバッチファイルに対してCRLFを使用
+*.bat text eol=crlf
