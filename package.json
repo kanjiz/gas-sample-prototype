@@ -6,7 +6,8 @@
     "scripts": {
         "build": "tsc && npm run copy-templates",
         "copy-templates": "cp -r src/templates dist/",
-        "push": "clasp push"
+        "create": "cd dist && clasp create --type standalone",
+        "push": "cd dist && clasp push"
     },
     "dependencies": {},
     "devDependencies": {
