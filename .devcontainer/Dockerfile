@@ -1,11 +1,11 @@
 # ベースイメージとして公式の Node.js イメージを使用
 FROM node:22
 
-# 作業ディレクトリを設定
-WORKDIR /workspace
+# 環境変数を設定
+ENV WORKDIR=/workspace
 
-# プロジェクトの依存関係をインストール
-RUN npm install
+# 作業ディレクトリを設定
+WORKDIR $WORKDIR
 
 # 必要なパッケージをグローバルにインストール
 RUN npm install -g @google/clasp

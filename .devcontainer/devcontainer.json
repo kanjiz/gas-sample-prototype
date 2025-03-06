@@ -8,6 +8,10 @@
     "mounts": [
         "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
     ],
+    "postCreateCommand": "npm install",
+    "remoteEnv": {
+        "WORKDIR": "/workspace"
+    },
     "customizations": {
         "vscode": {
             "extensions": [
