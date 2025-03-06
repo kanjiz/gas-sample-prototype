@@ -1,17 +1,17 @@
 {
-    "name": "gas-sample-prototype",
-    "version": "1.0.0",
-    "description": "Google Apps Script project using TypeScript",
-    "main": "dist/Code.js",
-    "scripts": {
-        "build": "tsc && npm run copy-templates",
-        "copy-templates": "cp -r src/templates dist/",
-        "create": "cd dist && clasp create --type standalone",
-        "push": "cd dist && clasp push"
-    },
-    "dependencies": {},
-    "devDependencies": {
-        "typescript": "^5.8.2",
-        "@types/google-apps-script": "^1.0.97"
-    }
+  "name": "gas-sample-prototype",
+  "version": "1.0.0",
+  "description": "Google Apps Script project using TypeScript",
+  "main": "dist/Code.js",
+  "scripts": {
+    "build": "tsc && npm run copy-templates",
+    "copy-templates": "cp -r src/templates dist/",
+    "create": "cd dist && clasp create --type standalone",
+    "push": "cd dist && clasp push"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.8.2",
+    "@types/google-apps-script": "^1.0.97"
+  }
 }
