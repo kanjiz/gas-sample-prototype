@@ -14,6 +14,11 @@ indent_size = 4
 # 行末の空白を削除
 trim_trailing_whitespace = true
 
+# JSONファイルの固有設定
+[*.json]
+# インデント幅を2スペースに設定
+indent_size = 2
+
 # Markdownファイルの固有設定
 [*.md]
 # 行の最大長を無効化

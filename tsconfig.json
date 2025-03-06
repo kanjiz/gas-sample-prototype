@@ -1,21 +1,21 @@
 {
-    "compilerOptions": {
-        "target": "ES2019", // 出力するJavaScriptのバージョン
-        "module": "none", // モジュールシステムを使用しない
-        "rootDir": "src", // ソースファイルのルートディレクトリ
-        "outDir": "dist", // 出力ディレクトリ
-        "lib": [
-            "es2019",
-            "dom"
-        ], // 使用するライブラリ
-        "strict": true, // 厳格な型チェックを有効にする
-        "esModuleInterop": true, // ESモジュールとの互換性を有効にする
-        "skipLibCheck": true // ライブラリの型チェックをスキップする
-    },
-    "include": [
-        "src/**/*.ts"
-    ], // コンパイル対象のファイル
-    "exclude": [
-        "node_modules"
-    ] // コンパイル対象から除外するファイル
+  "compilerOptions": {
+    "target": "ES2019", // 出力するJavaScriptのバージョン
+    "module": "none", // モジュールシステムを使用しない
+    "rootDir": "src", // ソースファイルのルートディレクトリ
+    "outDir": "dist", // 出力ディレクトリ
+    "lib": [
+      "es2019",
+      "dom"
+    ], // 使用するライブラリ
+    "strict": true, // 厳格な型チェックを有効にする
+    "esModuleInterop": true, // ESモジュールとの互換性を有効にする
+    "skipLibCheck": true // ライブラリの型チェックをスキップする
+  },
+  "include": [
+    "src/**/*.ts"
+  ], // コンパイル対象のファイル
+  "exclude": [
+    "node_modules"
+  ] // コンパイル対象から除外するファイル
 }
