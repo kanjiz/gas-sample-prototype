@@ -1,13 +1,16 @@
+import { defineConfig, globalIgnores } from "eslint/config";
 import typescriptEslintPlugin from "@typescript-eslint/eslint-plugin";
 import typescriptEslintParser from "@typescript-eslint/parser";
+import jsdoc from "eslint-plugin-jsdoc";
 import { configs } from "@typescript-eslint/eslint-plugin";
 
-export default [
+export default defineConfig([
+  globalIgnores([
+    "dist/**" // distディレクトリを無視
+  ]),
+  jsdoc.configs["flat/recommended-typescript"], // JSDocの推奨設定を適用
   {
-    ignores: [
-      "dist/", // distディレクトリを無視
-      "node_modules/", // node_modulesディレクトリを無視
-    ],
+    files: ["**/*.ts", "**/*.js"], // TypeScriptファイルとJavaScriptファイルを対象にする
     languageOptions: {
       parser: typescriptEslintParser,
       parserOptions: {
@@ -39,10 +42,10 @@ export default [
     },
     plugins: {
       "@typescript-eslint": typescriptEslintPlugin,
+      jsdoc,
     },
     rules: {
       ...configs.recommended.rules,
-      // 追加のルール設定
     },
   }
-];
+]);
