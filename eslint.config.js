@@ -4,7 +4,10 @@ import { configs } from "@typescript-eslint/eslint-plugin";
 
 export default [
   {
-    ignores: ["dist/"], // distディレクトリを無視
+    ignores: [
+      "dist/", // distディレクトリを無視
+      "node_modules/", // node_modulesディレクトリを無視
+    ],
     languageOptions: {
       parser: typescriptEslintParser,
       parserOptions: {
