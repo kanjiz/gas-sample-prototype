@@ -3,15 +3,19 @@
   "version": "1.0.0",
   "description": "Google Apps Script project using TypeScript",
   "main": "dist/Code.js",
+  "type": "module",
   "scripts": {
     "build": "tsc && npm run copy-templates",
     "copy-templates": "cp -r src/templates dist/",
     "create": "cd dist && clasp create --type standalone --title 'My Project' && node ../scripts/updateAppsscriptJson.js",
-    "push": "cd dist && clasp push"
+    "push": "cd dist && clasp push",
+    "lint": "eslint"
   },
-  "dependencies": {},
   "devDependencies": {
+    "@types/google-apps-script": "^1.0.97",
     "typescript": "^5.8.2",
-    "@types/google-apps-script": "^1.0.97"
+    "@typescript-eslint/eslint-plugin": "^8.26.1",
+    "@typescript-eslint/parser": "^8.26.1",
+    "eslint": "^9.22.0"
   }
 }
