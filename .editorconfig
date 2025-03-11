@@ -25,3 +25,8 @@ indent_size = 2
 max_line_length = off
 # 行末の空白を削除しない
 trim_trailing_whitespace = false
+
+# ESLint設定ファイルの固有設定
+[eslint.config.js]
+# インデント幅を2スペースに設定
+indent_size = 2
