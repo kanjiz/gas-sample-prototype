@@ -1,8 +1,8 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
 const filePath = path.join(__dirname, '../dist/appsscript.json');
-const appsscript = require(filePath);
+const appsscript = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 
 appsscript.timeZone = 'Asia/Tokyo';
 
