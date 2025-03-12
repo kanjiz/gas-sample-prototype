@@ -1,10 +1,23 @@
-import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
+import fs from 'fs';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const filePath = path.join(__dirname, '../dist/appsscript.json');
-const appsscript = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 
-appsscript.timeZone = 'Asia/Tokyo';
-
-fs.writeFileSync(filePath, JSON.stringify(appsscript, null, 2));
-console.log('Updated appsscript.json with timeZone: Asia/Tokyo');
+// ファイルの更新処理
+fs.readFile(filePath, 'utf8', (err, data) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  const json = JSON.parse(data);
+  json.timeZone = 'Asia/Tokyo'; // timeZoneをAsia/Tokyoに変更
+  fs.writeFile(filePath, JSON.stringify(json, null, 2), 'utf8', (err) => {
+    if (err) {
+      console.error(err);
+    }
+  });
+});
